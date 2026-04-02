@@ -1,4 +1,5 @@
 # Hughes Network Systems — Field Technician AI Chatbot
+![RAG Chatbot Banner](banner.png)
 
 An AI-powered chatbot built for Hughes Network Systems field technicians.
 Instead of calling customer support, technicians can ask the chatbot
