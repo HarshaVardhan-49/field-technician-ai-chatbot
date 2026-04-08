@@ -36,6 +36,26 @@ public class BotService {
             List<String> relevantChunks = openSearchService
                     .searchSimilarChunks(questionVector, 5);
 
+            // Step 2.5 - check confidence threshold
+            if (relevantChunks.isEmpty()) {
+                return "I don't have information on that. " +
+                        "Please contact Hughes support at 1-866-347-3292.";
+            }
+
+            double topScore = 0.0;
+            try {
+                String scoreLine = relevantChunks.get(0).split("\n")[0];
+                topScore = Double.parseDouble(
+                        scoreLine.replace("Score: ", "").trim());
+            } catch (Exception e) {
+                topScore = 0.0;
+            }
+
+            if (topScore < 0.45) {
+                return "I don't have information on that. " +
+                        "Please contact Hughes support at 1-866-347-3292.";
+            }
+
             // Step 3 - build context from chunks
             StringBuilder context = new StringBuilder();
             for (String chunk : relevantChunks) {

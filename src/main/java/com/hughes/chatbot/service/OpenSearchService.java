@@ -151,3 +151,13 @@ public class OpenSearchService {
         }
     }
 }
+
+//OpenAI  = internet service, costs money
+//converts text → vector
+//generates GPT answers
+//nothing stored here
+//
+//        OpenSearch = local storage on your Mac
+//runs inside Docker
+//stores all 115 chunks + vectors permanently
+//free to use
