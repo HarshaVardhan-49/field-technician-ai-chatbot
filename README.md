@@ -19,7 +19,8 @@ Field technicians often face time-sensitive issues — weak signal, modem failur
 
 ## 🏗️ Architecture — RAG (Retrieval Augmented Generation)
 
-```
+``iiii
+`
 ┌─────────────────────────────────────────────────────────────┐
 │                      INGESTION PIPELINE                      │
 │                                                             │
